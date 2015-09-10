@@ -3,9 +3,11 @@
 Repo for Agile Programming with Design Patterns at CVTC
 
 Instructor: Brian Hogan
+
 Member Contributors: Emily Mikl, Eric Mohr, Frances Manka, Edward Dumholt
 
 Ruby ver. 2.2.2p95
+
 Rails ver. 4.2.1
 
 Under this project, we will build an app for parsing Markdown documents &
