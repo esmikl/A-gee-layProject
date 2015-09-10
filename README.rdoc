@@ -1,28 +1,21 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Repo for Agile Programming with Design Patterns at CVTC
 
-Things you may want to cover:
+Instructor: Brian Hogan
+Member Contributors: Emily Mikl, Eric Mohr, Frances Manka, Edward Dumholt
 
-* Ruby version
+Ruby ver. 2.2.2p95
+Rails ver. 4.2.1
 
-* System dependencies
+Under this project, we will build an app for parsing Markdown documents &
+tracking notes. 
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
+Eventual features:
+  Side-by-side windows for editing and previewing Markdown documents.
+  Ability to add, edit, tag, track, search, and delete notes created in Markdown.
+  User authentication.
+  Others as deemed necessary.
 
 Please feel free to use a different markup language if you do not plan to run
 <tt>rake doc:app</tt>.
