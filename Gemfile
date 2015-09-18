@@ -13,6 +13,10 @@ gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
+
+#Use bootstrap for responsive design
+gem 'bootstrap-sass', '~> 3.3.5.1'
+
 # Use kramdown for parsing markdown
 gem 'kramdown', '~> 1.8.0'
 # Use jquery as the JavaScript library
