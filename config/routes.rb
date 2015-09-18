@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   
+  resources :notes
   root controller: 'home', action: 'about'
   
   get 'home/index'
