@@ -60,6 +60,12 @@ class NotesController < ApplicationController
       format.json { head :no_content }
     end
   end
+  
+  def process_markdown
+    text_to_transform = params[:text]
+    html = Kramdown::Document.new(text_to_transform).to_html
+    render :text => html
+  end
 
   private
     # Use callbacks to share common setup or constraints between actions.

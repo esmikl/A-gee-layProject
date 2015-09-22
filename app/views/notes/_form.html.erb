@@ -23,6 +23,9 @@
     <%= f.label :content %><br>
     <%= f.text_area :content %>
   </div>
+  <div id="preview">
+    <%= kramdown(@note.content) %>
+  </div>
   <div class="actions">
     <%= f.submit "Save Note", class: "btn" %>
   </div>
