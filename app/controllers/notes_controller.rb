@@ -5,6 +5,11 @@ class NotesController < ApplicationController
   # GET /notes.json
   def index
     @notes = Note.all
+    if @notes == []
+      render "notes/no_notes"
+    else
+      render :index
+    end
   end
 
   # GET /notes/1
