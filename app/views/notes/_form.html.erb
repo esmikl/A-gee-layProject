@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= f.label :title %><%= content_tag :span, ' - limit of 250 characters' %><br>
-    <%= f.text_field :title, size: 100, :placeholder  => 'e.g. Homework for BI class, Go to Eau Claire, Plan end of semester party, Go to JCPenney ' %>
+    <%= f.text_field :title, :maxlength => 250, size: 100, :placeholder  => 'e.g. Homework for BI class, Go to Eau Claire, Plan end of semester party, Go to JCPenney ' %>
   </div>
   <div class="field">
     <%= f.label :tag %><%= content_tag :span, ' - separate tags with commas' %><br>
