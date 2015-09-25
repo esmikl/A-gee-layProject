@@ -7,13 +7,14 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <div class="container">
     <nav>
 
       <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
       <%= link_to 'About', controller: 'home', action: 'about' %>
+      <%= link_to 'Dashboard', controller: 'home', action: 'dashboard' %>
 
     </nav>
+  <div class="container">
 
     <%= yield %>
   </div>
