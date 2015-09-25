@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   root controller: 'home', action: 'about'
   
   get 'home/index'
-  get '/dashboard', controller: 'home', action: 'dashboard', as: 'dashboard'
+    get '/dashboard', controller: 'home', action: 'dashboard', as: 'dashboard'
   
   post '/notes/process/' => 'notes#process_markdown'
 
