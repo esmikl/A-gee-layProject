@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   
   get 'dashboard/show'
 
+  get 'dashboard/show'
+
   resources :notes
   root controller: 'home', action: 'about'
   
