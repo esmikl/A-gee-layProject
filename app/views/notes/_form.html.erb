@@ -10,23 +10,32 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
+  <div class="row">
+  <div class="field, col-md-6">
     <%= f.label :title %><%= content_tag :span, ' - limit of 250 characters' %><br>
-    <%= f.text_field :title, :maxlength => 250, size: 100, :placeholder  => 'e.g. Homework for BI class, Go to Eau Claire, Plan end of semester party, Go to JCPenney ' %>
+    <%= f.text_field :title, :maxlength => 250, :placeholder  => 'e.g. Homework for BI class, Plan end of semester party', class:"col-md-12" %><br><br>
   </div>
-  <div class="field">
+  <div class="field, col-md-6">
     <%= f.label :tags %><%= content_tag :span, ' - separate tags with commas' %><br>
-    <%= f.text_field :tag, size: 50, :placeholder  => 'e.g. groceries, shopping, pet, party, clothes' %>
+    <%= f.text_field :tag, :placeholder  => 'e.g. groceries, shopping, pet, party, clothes', class:"col-md-12" %><br><br>
   </div>
-  <div class="field">
-    <%= f.label :content %><br>
-    <%= f.text_area :content %>
+
+    <div class="field, col-md-6">
+      <%= f.label :content %><%= content_tag :span, ' - type your note here using markdown' %>
+      <%= f.text_area :content, :rows=>20, class:"col-md-12" %>
+    </div>
+
+    <div class="field, col-md-6">
+      <%= f.label :preview %><%= content_tag :span, ' - see your markdown in action' %>
+
+    </div>
+    <div id= preview class="field, col-md-6">
+      <%= kramdown(@note.content) %>
+    </div>
+    </div>
   </div>
-  <div id="preview">
-    <%= kramdown(@note.content) %>
-  </div>
-  <div class="actions">
+  <div class="actions" >
     <%= f.submit "Save Note", class: "btn" %>
   </div>
+
 <% end %>

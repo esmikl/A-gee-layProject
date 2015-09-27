@@ -8,7 +8,7 @@ var setup = function() {
     
     $.ajax({
       method: "POST",
-      url: "process",
+      url: "/notes/process",
       data: {text: textToTransform}
     })
       .done(function(message) {

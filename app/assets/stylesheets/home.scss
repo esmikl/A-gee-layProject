@@ -2,6 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+body {
+    font-family: Open Sans, sans-serif;
+}
+
 h1.logo {
     text-indent: -9999px;
     background-image: url(scrawl.png);
@@ -15,3 +19,9 @@ a.main_link {
     display: block;
     text-align: center;
 }
+
+.btn {
+    background-color: #FF8B0D;
+    color: #FFF;
+}
+
