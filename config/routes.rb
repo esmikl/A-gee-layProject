@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   
   get 'home/index'
     get '/dashboard' => 'dashboard#show'
+
   
   post '/notes/process/' => 'notes#process_markdown'
 
