@@ -1,9 +1,12 @@
 Rails.application.routes.draw do
   
+  get 'dashboard/show'
+
   resources :notes
   root controller: 'home', action: 'about'
   
   get 'home/index'
+    get '/dashboard' => 'dashboard#show'
   
   post '/notes/process/' => 'notes#process_markdown'
 
