@@ -9,11 +9,12 @@
 </head>
 <body>
     <nav>
-
-      <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
-      <%= link_to 'About', controller: 'home', action: 'about' %>
-        <%= link_to 'Dashboard', controller: 'dashboard', action: 'show' %>
-
+        <div class="container">
+            <%= link_to image_tag("scrawl_white.png", :alt => "white scrawl logo", class: "logo"), {:action => 'about', :controller => 'home'}, class: "linkToHome" %>
+            <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
+            <%= link_to 'Dashboard', controller: 'dashboard', action: 'show' %>
+        </div>
+      
     </nav>
   <div class="container">
     <p id="notice"><%= notice %></p>

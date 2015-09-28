@@ -6,6 +6,7 @@
 
 body {
     font-family: Lato, sans-serif !important;
+    color: #323232 !important;
 }
 
 h1, h2 {
@@ -18,44 +19,57 @@ h1.logo {
     background-image: url(scrawl.png);
     background-repeat: no-repeat;
     height: 238px;
-    background-position: 50%;
-}
-
-a.main_link {
-    color: #13ccff;
-    display: block;
-    text-align: center;
+    background-position: 45%;
 }
 
 .btn {
     background-color: #FF8B0D;
-    color: #FFF;
+    color: #FFF !important;
+    text-decoration: none !important;
+    
+    &:hover {
+        color: #060367 !important;
+    }
 }
 
 nav {
     background-color: #13CCFF;
-    background-image: url(scrawl_white.png);
-    background-repeat: no-repeat;
-    background-size: 8%;
-    background-position: 8%;
     height: 60px;
     padding-right: 30px;
 }
 
 nav a {
     display: block;
-    color: #FFF;
+    color: #FFF !important;
     float: right;
     height: 60px;
     padding: 22px 25px 25px 25px;
     text-transform: uppercase;
+    text-decoration: none !important;
+    
+    &:visited {
+        color: #FFF;
+    }
+    
+    &:hover {
+        text-decoration: none;
+        background-color: #FF8B0D;
+    }
+    
+    &.linkToHome {
+        float: none;
+        display: inline;
+        padding: 0px;
+    }
+    
+    &.linkToHome:hover {
+        background-color: transparent;
+    }
 }
 
-nav a:visited {
-    color: #FFF;
-}
 
-nav a:hover {
-    text-decoration: none;
-}
 
+img.logo {
+    margin-top: 3px;
+    margin-left: 15px;
+}

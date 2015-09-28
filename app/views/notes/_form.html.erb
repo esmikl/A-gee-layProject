@@ -27,13 +27,13 @@
 
     <div class="field, col-md-6">
       <%= f.label :preview %><%= content_tag :span, ' - see your markdown in action' %>
-
+        <div id=preview>
+          <%= kramdown(@note.content) %>
+        </div>
     </div>
-    <div id= preview class="field, col-md-6">
-      <%= kramdown(@note.content) %>
+    
     </div>
-    </div>
-  </div>
+<br>
   <div class="actions" >
     <%= f.submit "Save Note", class: "btn" %>
   </div>
