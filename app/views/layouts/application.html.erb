@@ -5,14 +5,16 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,400italic,300,800' rel='stylesheet' type='text/css'>
 </head>
 <body>
     <nav>
-
-      <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
-      <%= link_to 'About', controller: 'home', action: 'about' %>
-      <%= link_to 'Dashboard', controller: 'home', action: 'dashboard' %>
-
+        <div class="container">
+            <%= link_to image_tag("scrawl_white.png", :alt => "white scrawl logo", class: "logo"), {:action => 'about', :controller => 'home'}, class: "linkToHome" %>
+            <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
+            <%= link_to 'Dashboard', controller: 'dashboard', action: 'show' %>
+        </div>
+      
     </nav>
   <div class="container">
     <p id="notice"><%= notice %></p>

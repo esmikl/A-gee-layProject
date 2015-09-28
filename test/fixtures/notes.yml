@@ -1,11 +1,11 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  title: MyString
-  tag: MyText
-  content: MyText
+  title: "Do peer evaluations for Agile"
+  tag: "homework, school"
+  content: "Do peer evaluations for Agile class. Link is on E360."
 
 two:
-  title: MyString
-  tag: MyText
-  content: MyText
+  title: "Get groceries"
+  tag: "groceries, errands"
+  content: "Pick up bread, milk, eggs, orange juice, and beer."

@@ -2,16 +2,74 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+@import url(https://fonts.googleapis.com/cssfamily=Lato:400,300,700,400italic,700italic,900);
+
+body {
+    font-family: Lato, sans-serif !important;
+    color: #323232 !important;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-weight: 900 !important;
+}
+
 h1.logo {
     text-indent: -9999px;
     background-image: url(scrawl.png);
     background-repeat: no-repeat;
     height: 238px;
-    background-position: 50%;
+    background-position: 45%;
 }
 
-a.main_link {
-    color: #13ccff;
+.btn {
+    background-color: #FF8B0D;
+    color: #FFF !important;
+    text-decoration: none !important;
+    
+    &:hover {
+        color: #060367 !important;
+    }
+}
+
+nav {
+    background-color: #13CCFF;
+    height: 60px;
+    padding-right: 30px;
+}
+
+nav a {
     display: block;
-    text-align: center;
+    color: #FFF !important;
+    float: right;
+    height: 60px;
+    padding: 22px 25px 25px 25px;
+    text-transform: uppercase;
+    text-decoration: none !important;
+    
+    &:visited {
+        color: #FFF;
+    }
+    
+    &:hover {
+        text-decoration: none;
+        background-color: #FF8B0D;
+    }
+    
+    &.linkToHome {
+        float: none;
+        display: inline;
+        padding: 0px;
+    }
+    
+    &.linkToHome:hover {
+        background-color: transparent;
+    }
+}
+
+
+
+img.logo {
+    margin-top: 3px;
+    margin-left: 15px;
 }
