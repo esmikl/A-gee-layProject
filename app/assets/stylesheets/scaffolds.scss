@@ -28,19 +28,16 @@ a {
     color: #666;
   }
     
-    &.dashboardTitle {
-        font-size: 18px;
-    }
-    
 }
 
-/*a.main_link {
-    font-size: 25px;
+a.main_link {
+    font-size: 18px;
     text-transform: uppercase;
     display: block;
     text-align: center;
     font-weight: bold;
-}*/
+    color: #FF8B0D !important;
+}
 
 div {
   &.field, &.actions {
@@ -54,13 +51,16 @@ div {
 }
 
 .field_with_errors {
-  padding: 2px;
-  background-color: #c00;
-  display: table;
-}
-
-.field_with_errors label {
-    color: #fff;
+  display: inline;
+    
+    & input {
+        border: 2px solid #C5210D;
+    }
+    
+    & > textarea#note_content {
+        border: 2px solid #C5210D;
+    }
+    
 }
 
 #error_explanation {
