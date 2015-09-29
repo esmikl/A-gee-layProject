@@ -30,13 +30,14 @@ a {
     
 }
 
-/*a.main_link {
-    font-size: 25px;
+a.main_link {
+    font-size: 18px;
     text-transform: uppercase;
     display: block;
     text-align: center;
     font-weight: bold;
-}*/
+    color: #FF8B0D !important;
+}
 
 div {
   &.field, &.actions {
