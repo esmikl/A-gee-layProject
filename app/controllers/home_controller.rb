@@ -5,7 +5,4 @@ class HomeController < ApplicationController
   def about
   end
     
-  def dashboard
-  end
-    
 end

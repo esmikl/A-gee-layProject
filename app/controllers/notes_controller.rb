@@ -25,10 +25,6 @@ class NotesController < ApplicationController
   # GET /notes/1/edit
   def edit
   end
-    
-  def mostRecent
-      @recentNotes = Note.last(5)
-  end
 
   # POST /notes
   # POST /notes.json

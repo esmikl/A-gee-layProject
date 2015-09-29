@@ -1,14 +1,18 @@
 <h1>Dashboard</h1>
 
-<h2>Recent notes</h2>
-
 <table>
+    <thead>
+        <tr>
+          <th>Recent Notes</th>
+          <th>Last Updated</th>
+        </tr>
+    </thead>
   <tbody>
     <% @recent_notes.each do |note| %>
       <tr>
-          <td><%= link_to note.title, edit_note_path(note), class: "dashboardTitle" %></td>
+        <td><%= link_to note.title, edit_note_path(note), class: "dashboardTitle" %></td>
         <td><%= time_ago_in_words(note.updated_at) %></td>
-        <td><%= link_to 'Delete', note, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
+        <td><%= link_to image_tag("trashcan.png"), note, method: :delete, data: { confirm: 'Are you sure?' }, class: "trash" %> </td>
       </tr>
     <% end %>
   </tbody>
