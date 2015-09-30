@@ -25,8 +25,9 @@ h1.logo {
 .btn {
     background-color: #FF8B0D;
     color: #FFF !important;
+    height: 40px;
     text-decoration: none !important;
-    
+    line-height: 26px !important;
     &:hover {
         color: #060367 !important;
     }
