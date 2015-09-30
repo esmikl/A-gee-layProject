@@ -12,7 +12,6 @@ var setup = function() {
       data: {text: textToTransform}
     })
       .done(function(message) {
-        console.log(message);
         $preview.html(message);
       });
   });
