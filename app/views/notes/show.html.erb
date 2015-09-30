@@ -13,5 +13,11 @@
   <%= @note.content %>
 </p>
 
+<% if @note.slug.present? %>
+  <p>
+    <strong>Shareable URL: </strong><%= url_for :controller => "shared_notes", :action => "show", :id => @note.slug, host: "localhost", port: "3000"%>
+  </p>
+<% end %>
+
 <%= link_to 'Edit', edit_note_path(@note) %> |
 <%= link_to 'Back', notes_path %>

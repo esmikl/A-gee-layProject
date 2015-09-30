@@ -3,3 +3,5 @@
 <%= render 'form' %>
 
 <%= link_to 'My Notes', notes_path %>
+<%= button_to 'Share', share_note_path(@note), method: :put if @note.slug.blank? %>
+<%= button_to 'Unshare', unshare_note_path(@note), method: :put if @note.slug.present? %>

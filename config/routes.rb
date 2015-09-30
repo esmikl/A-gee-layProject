@@ -1,15 +1,25 @@
 Rails.application.routes.draw do
-  
-  get 'dashboard/show'
-
   get 'dashboard/show'
 
   resources :notes
+  
+  resources :notes do
+    member do
+      put 'share'
+    end
+  end
+  
+  resources :notes do
+    member do
+      put 'unshare'
+    end
+  end
+  
   root controller: 'home', action: 'about'
   
   get 'home/index'
-    get '/dashboard' => 'dashboard#show'
-
+  get '/dashboard' => 'dashboard#show'
+  get 'shared_notes/:id' => 'shared_notes#show'
   
   post '/notes/process/' => 'notes#process_markdown'
 

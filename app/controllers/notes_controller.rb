@@ -1,5 +1,5 @@
 class NotesController < ApplicationController
-  before_action :set_note, only: [:show, :edit, :update, :destroy]
+  before_action :set_note, only: [:show, :edit, :update, :destroy, :share, :unshare]
 
   # GET /notes
   # GET /notes.json
@@ -70,6 +70,18 @@ class NotesController < ApplicationController
     text_to_transform = params[:text]
     html = Kramdown::Document.new(text_to_transform).to_html
     render :text => html
+  end
+  
+  def share
+    @note.share
+    @note.save
+    redirect_to @note, notice: 'Note was successfully shared.'
+  end
+  
+  def unshare
+    @note.unshare
+    @note.save
+    redirect_to @note, notice: 'Note was successfully unshared.'
   end
 
   private
