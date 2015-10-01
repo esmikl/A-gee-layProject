@@ -15,7 +15,7 @@
 
 <% if @note.slug.present? %>
   <p>
-    <strong>Shareable URL: </strong><%= url_for :controller => "shared_notes", :action => "show", :id => @note.slug, host: "localhost", port: "3000"%>
+    <strong>Shareable URL: </strong><%= url_for :controller => "shared_notes", :action => "show", :id => @note.slug %>
   </p>
 <% end %>
 
