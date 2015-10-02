@@ -13,7 +13,7 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= link_to note.title, edit_note_path(note) %></td>
-        <td><%= note.tag %></td>
+        <td><%= link_to note.tag_list.to_s %></td>
         <td><%= link_to image_tag("trashcan.png"), note, method: :delete, data: { confirm: 'Are you sure?' }, class: "trash" %></td>
       </tr>
     <% end %>

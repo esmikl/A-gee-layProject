@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
   get 'dashboard/show'
-
+  get 'tags/:tag', to: 'tags#show'
   resources :notes
-  
+  resources :tags, only: [:index, :show]
   resources :notes do
     member do
       put 'share'
