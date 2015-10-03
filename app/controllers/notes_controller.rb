@@ -4,7 +4,11 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
+    if params[:tag]
+      @notes= Note.tagged_with(params[:tag])
+    else
     @notes = Note.all
+    end
     if @notes == []
       render "notes/no_notes"
     else
