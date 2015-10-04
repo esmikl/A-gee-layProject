@@ -7,7 +7,7 @@ class NotesController < ApplicationController
     if params[:tag]
       @notes= Note.tagged_with(params[:tag])
     else
-    @notes = Note.all
+    @notes = Note.all.order('updated_at DESC')
     end
     if @notes == []
       render "notes/no_notes"

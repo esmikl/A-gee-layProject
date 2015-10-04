@@ -1,12 +1,13 @@
 <h1>My Notes</h1>
 
 <div id="tag_cloud">
-    
-    <%= tag_cloud Note.tag_counts, %w[d m l] do |tag, css_class| %>
+  <h3>Filter by tag:</h3>
+
+  <% tag_cloud Note.tag_counts, %w[d m l] do |tag, css_class| %>
       <%= link_to tag.name, tag_path(tag.name), class: css_class %>
     <% end %>
-    
-</div>
+
+</div><br>
 
 <table>
   <thead>
