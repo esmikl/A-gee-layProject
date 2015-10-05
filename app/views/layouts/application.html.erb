@@ -10,14 +10,17 @@
 <body>
     <nav>
         <div class="container">
-            <%= link_to image_tag("scrawl_white.png", :alt => "white scrawl logo", class: "logo"), {:action => 'about', :controller => 'home'}, class: "linkToHome" %>
-            <%= link_to 'My Notes', controller: 'notes', action: 'index' %>
-            <%= link_to 'Dashboard', controller: 'dashboard', action: 'show' %>
+            
+            
         </div>
-      
     </nav>
   <div class="container">
     <h4 id="notice"><%= notice %></h4>
+    <div class="small_logo"></div>
+    <div class="shiftUp">
+        <%= link_to 'Dashboard', {controller: 'dashboard', action: 'show'}, class: 'link floatRight' %>
+        <%= link_to 'My Notes', {controller: 'notes', action: 'index'}, class: 'link floatRight' %>
+    </div>
     <%= yield %>
   </div>
 

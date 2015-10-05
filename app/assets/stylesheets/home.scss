@@ -14,12 +14,20 @@ h1, h2 {
     font-weight: 900 !important;
 }
 
-h1.logo {
+h1.logo, {
     text-indent: -9999px;
     background-image: url(scrawl.png);
     background-repeat: no-repeat;
     height: 238px;
     background-position: 45%;
+}
+
+.small_logo {
+    background-image: url(scrawl.png);
+    background-repeat: no-repeat;
+    height: 90px; 
+    width: 15%;
+    background-size: 150px 60px;
 }
 
 .btn {
@@ -84,5 +92,9 @@ a.link {
   }
 }
 
-
-
+.floatRight {
+  float: right;
+  margin: 0 6px;
+  position: relative;
+  top: -80px;
+}
