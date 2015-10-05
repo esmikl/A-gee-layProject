@@ -11,15 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151002150420) do
+ActiveRecord::Schema.define(version: 20151003210535) do
 
   create_table "notes", force: :cascade do |t|
     t.string   "title"
     t.text     "tag"
     t.text     "content"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.string   "slug"
+    t.boolean  "trash",      default: false
   end
 
   create_table "taggings", force: :cascade do |t|
@@ -37,9 +38,11 @@ ActiveRecord::Schema.define(version: 20151002150420) do
 
   create_table "tags", force: :cascade do |t|
     t.string  "name"
+    t.integer "note_id"
     t.integer "taggings_count", default: 0
   end
 
   add_index "tags", ["name"], name: "index_tags_on_name", unique: true
+  add_index "tags", ["note_id"], name: "index_tags_on_note_id"
 
 end

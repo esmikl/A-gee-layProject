@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'trash/view'
+
   get 'tags/index'
 
   get 'tags/show'
