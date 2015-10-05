@@ -95,7 +95,7 @@ a.link, input.link {
 input {
   border-radius: 5px;
   border-style: solid;
-  height: 32px !important;
+  
   &.link {
     background-color: #FFF;
     border: 2px solid #0B06A4;
@@ -116,4 +116,8 @@ input {
   margin: 0 6px;
   position: relative;
   top: -80px;
+}
+
+.nudgeUp {
+  top: -84px;
 }
