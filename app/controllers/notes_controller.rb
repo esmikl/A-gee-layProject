@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.where(:trash => false)
+    @notes = Note.all.where(:trash => "false")
     if params[:q]
       @notes = Note.find_all_by_query(params[:q])
     else
