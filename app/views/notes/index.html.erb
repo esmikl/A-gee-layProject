@@ -26,6 +26,7 @@
         <td><%= time_ago_in_words(note.updated_at) %></td>
         <td><%= raw note.tag_list.map { |t| link_to t, tag_path(t), class: "link" }.join(' ') %></td>
         <td><%= link_to image_tag("trashcan.png"), note, method: :delete, data: { confirm: 'Are you sure?' }, class: "trash" %></td>
+        <td><%= note.trash %></td>
       </tr>
     <% end %>
   </tbody>

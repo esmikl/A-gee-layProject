@@ -28,6 +28,8 @@ Rails.application.routes.draw do
   get 'shared_notes/:id' => 'shared_notes#show'
   
   post '/notes/process/' => 'notes#process_markdown'
+  
+  get '/trash' => 'trash#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
