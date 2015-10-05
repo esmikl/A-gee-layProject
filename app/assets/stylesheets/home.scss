@@ -73,5 +73,16 @@ img.logo {
     margin-left: 15px;
 }
 
+a.link {
+  border: 2px solid #0B06A4;
+  border-radius: 5px;
+  padding: 4px;
+  &:hover {
+    color: #FFF !important;
+    background-color: #0B06A4;
+    text-decoration: none;
+  }
+}
+
 
 
