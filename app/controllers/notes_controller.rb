@@ -4,18 +4,13 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-   @notes = Note.where(:trash => false)
-    if params[:tag]
-      @notes = Note.where(':trash => false', params[:tag])
-    else
-      @notes = Note.where(:trash => false).order('updated_at DESC')
-    end
+   #@notes = Note.where(:trash => false)
     if params[:q]
-      @notes = Note.find_all_by_query(params[:q])
+      @notes = Note.find_all_by_query(params[:q]).where(:trash => false)
     else
-      @notes = Note.all.order('updated_at DESC')
+      @notes = Note.all.order('updated_at DESC').where(:trash => false)
     end
-
+    
     if @notes == []
       render "notes/no_notes"
     else
