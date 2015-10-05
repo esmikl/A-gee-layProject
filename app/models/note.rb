@@ -14,4 +14,13 @@ class Note < ActiveRecord::Base
     self.slug = nil
   end
   
+  def self.find_all_by_query(query)
+    
+    query = query.downcase
+    query = "%#{query}%"
+    Note.where(['lower(title) like ?
+                 OR lower(content) like ?',
+                 query, query])
+  end
+  
 end
