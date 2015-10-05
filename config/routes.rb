@@ -30,6 +30,14 @@ Rails.application.routes.draw do
   post '/notes/process/' => 'notes#process_markdown'
   
   get '/trash' => 'trash#show'
+  
+  resources :notes do
+    member do
+      put 'restore'
+    end
+  end
+  
+  get '/notes' => 'trash#restore'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
