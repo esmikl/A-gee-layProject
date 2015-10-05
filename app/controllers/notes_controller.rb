@@ -4,7 +4,11 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-    @notes = Note.all
+    if params[:tag]
+      @notes= Note.tagged_with(params[:tag])
+    else
+    @notes = Note.all.order('updated_at DESC')
+    end
     if @notes == []
       render "notes/no_notes"
     else

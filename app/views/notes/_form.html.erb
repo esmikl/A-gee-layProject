@@ -17,7 +17,7 @@
   </div>
   <div class="field, col-md-6">
     <%= f.label :tags %><%= content_tag :span, ' - separate tags with commas' %><br>
-    <%= f.text_field :tag_list, :placeholder  => 'e.g. groceries, shopping, pet, party, clothes', class:"col-md-12" %><br><br>
+    <%= f.text_field :tag_list, value: @note.tag_list.to_s, :placeholder  => 'e.g. groceries, shopping, pet, party, clothes', class:"col-md-12" %><br><br>
   </div>
 
     <div class="field, col-md-6">

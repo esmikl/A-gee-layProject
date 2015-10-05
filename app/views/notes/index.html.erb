@@ -1,5 +1,14 @@
 <h1>My Notes</h1>
 
+<div id="tag_cloud">
+  <h3>Filter by tag:</h3>
+
+  <% tag_cloud Note.tag_counts, %w[d m l] do |tag, css_class| %>
+      <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+    <% end %>
+
+</div><br>
+
 <table>
   <thead>
     <tr>
@@ -15,7 +24,7 @@
       <tr>
         <td><%= link_to note.title, edit_note_path(note) %></td>
         <td><%= time_ago_in_words(note.updated_at) %></td>
-        <td><%= link_to note.tag_list.to_s %></td>
+        <td><%= raw note.tag_list.map { |t| link_to t, tag_path(t) }.join(', ') %></td>
         <td><%= link_to image_tag("trashcan.png"), note, method: :delete, data: { confirm: 'Are you sure?' }, class: "trash" %></td>
       </tr>
     <% end %>

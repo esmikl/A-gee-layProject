@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'tags/index'
+
+  get 'tags/show'
+
   get 'dashboard/show'
   get 'tags/:tag', to: 'tags#show'
   resources :notes
