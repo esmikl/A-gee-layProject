@@ -21,5 +21,4 @@ class NoteTest < ActiveSupport::TestCase
         assert note.errors[:content]
     end
     
-    
 end

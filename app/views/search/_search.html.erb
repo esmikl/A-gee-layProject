@@ -1,0 +1,5 @@
+<%= form_tag notes_url, method: :get do %>
+  <label for="query">Search: </label>
+  <input type="search" id="query" name="q" value="<%= params[:q] %>">
+  <input type="submit" value="Search" class="btn">
+<% end %>
