@@ -4,7 +4,7 @@ class NotesController < ApplicationController
   # GET /notes
   # GET /notes.json
   def index
-   #@notes = Note.where(:trash => false)
+   @notes = Note.where(:trash => false)
     if params[:tag]
       @notes = Note.where(':trash => false', params[:tag])
     else
