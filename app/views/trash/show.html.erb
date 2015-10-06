@@ -15,8 +15,8 @@
         <td><%= link_to note.title, edit_note_path(note), class: "link" %></td>
         <td><%= time_ago_in_words(note.updated_at) %></td>
         <td><%= raw note.tag_list.map { |t| link_to t, tag_path(t), class: "link" }.join(' ') %></td>
-        <td><%= link_to "Restore", notes_path, :controller => "trash", :action => "restore" %></td>
-        <td><%= link_to 'Delete', note, :method => :destroy, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= button_to "Restore", trashed_note_path(note), :method => :patch, class: "btn" %> </td>
+        <td><%= button_to 'Delete', trashed_note_path(note), :method => :delete, data: { confirm: 'Are you sure you want to permanently delete this note?' }, class: "btn" %></td>
       </tr>
     <% end %>
   </tbody>

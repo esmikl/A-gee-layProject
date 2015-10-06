@@ -31,13 +31,7 @@ Rails.application.routes.draw do
   
   get '/trash' => 'trash#show'
   
-  resources :notes do
-    member do
-      put 'restore'
-    end
-  end
-  
-  get '/notes' => 'trash#restore'
+  resources :trashed_notes, only: [:index, :update, :destroy]
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
