@@ -15,4 +15,9 @@ class TrashedNotesController < ApplicationController
     redirect_to trash_path, notice: "Note was permanently deleted."
   end
   
+  def emptyTrash
+    @note = Note.all
+    @note.destroy
+  end
+  
 end
