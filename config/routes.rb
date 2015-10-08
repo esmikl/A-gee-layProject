@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :users
   get 'trash/view'
 
   get 'tags/index'
@@ -21,7 +22,7 @@ Rails.application.routes.draw do
     end
   end
   
-  root controller: 'home', action: 'about'
+  root to: 'home#about'
   
   get 'home/index'
   get '/dashboard' => 'dashboard#show'
