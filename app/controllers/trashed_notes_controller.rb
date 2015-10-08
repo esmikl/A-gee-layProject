@@ -16,8 +16,9 @@ class TrashedNotesController < ApplicationController
   end
   
   def emptyTrash
-    @note = Note.all
-    @note.destroy
+    @trashed_notes = Note.where(:trash => true)
+    @trashed_notes.destroy_all
+    redirect_to(:back, notice: "Your trash is empty.")
   end
   
 end
