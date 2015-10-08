@@ -41,6 +41,18 @@ h1.logo, {
     }
 }
 
+.button_to > input {
+    background-color: #FF8B0D;
+  border-style: none !important;
+    color: #FFF !important;
+    height: 40px;
+    text-decoration: none !important;
+    line-height: 26px !important;
+    &:hover {
+        color: #060367 !important;
+    }
+}
+
 nav {
     background-color: #13CCFF;
     height: 60px;
