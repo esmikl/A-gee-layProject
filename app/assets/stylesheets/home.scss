@@ -43,7 +43,7 @@ h1.logo, {
 
 .button_to > input {
     background-color: #FF8B0D;
-  border-style: none !important;
+    border-style: none !important;
     color: #FFF !important;
     height: 40px;
     text-decoration: none !important;
@@ -54,17 +54,24 @@ h1.logo, {
 }
 
 nav {
-    background-color: #13CCFF;
     height: 60px;
     padding-right: 30px;
+    margin-top: 30px;
+  
+    form{
+      float: right;
+      height: 30px !important;
+      position: relative;
+      top: -4px;
+    }
 }
 
 nav a {
     display: block;
-    color: #FFF !important;
     float: right;
-    height: 60px;
+    height: 30px;
     padding: 22px 25px 25px 25px;
+    margin: auto 6px;
     text-transform: uppercase;
     text-decoration: none !important;
     
@@ -86,6 +93,7 @@ nav a {
     &.linkToHome:hover {
         background-color: transparent;
     }
+    
 }
 
 img.logo {
@@ -114,7 +122,7 @@ input {
     border-radius: 5px;
     padding: 4px;
     position: relative;
-    height: 34px;
+    height: 30px;
     &:hover {
       color: #FFF !important;
       background-color: #0B06A4;
@@ -132,4 +140,10 @@ input {
 
 .nudgeUp {
   top: -84px;
+}
+
+#bluestripe {
+  background-color: #13CCFF;
+  height: 20px;
+  width: 100%;
 }
