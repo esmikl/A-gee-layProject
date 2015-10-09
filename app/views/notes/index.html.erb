@@ -25,7 +25,7 @@
     <% @notes.each do |note| %>
       <tr>
         <td><%= link_to note.title, edit_note_path(note), class: "link" %></td>
-        <td><%= time_ago_in_words(note.updated_at) %></td>
+        <td><%= time_ago_in_words(note.updated_at) %> ago</td>
         <td><%= raw note.tag_list.map { |t| link_to t, tag_path(t), class: "link" }.join(' ') %></td>
         <td><%= link_to image_tag("trashcan.png"), note, method: :delete, data: { confirm: 'Move this note to the trash?' }, class: "trash" %></td>
       </tr>

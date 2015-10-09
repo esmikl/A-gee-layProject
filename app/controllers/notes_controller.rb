@@ -1,6 +1,6 @@
 class NotesController < ApplicationController
   before_action :set_note, only: [:show, :edit, :update, :destroy, :share, :unshare]
-
+  before_action :authenticate_user!, except: [:share]
   # GET /notes
   # GET /notes.json
   def index

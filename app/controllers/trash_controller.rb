@@ -1,4 +1,5 @@
 class TrashController < ApplicationController
+  before_action :authenticate_user!
   def show
     @trashed_notes = Note.where(:trash => true)
   end 

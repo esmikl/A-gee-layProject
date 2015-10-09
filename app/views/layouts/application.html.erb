@@ -11,11 +11,17 @@
       <div id="bluestripe">
       
       </div>
+      <% if user_signed_in? %>
+        Signed is as <%= current_user.email %>. Not you?
+        <%= link_to "Sign Out", destroy_user_session_path, :method => :delete %>
+      <% else %>
+        <%= link_to "Sign Up", new_user_registration_path %> or <%= link_to "Sign In", new_user_session_path %>
+      <% end %> 
     <nav>
       <div class="container">
-        <%= link_to 'Trash', {controller: 'trash', action: 'show'}, class: 'link' %>
-        <%= link_to 'Dashboard', {controller: 'dashboard', action: 'show'}, class: 'link' %>
-        <%= link_to 'My Notes', {controller: 'notes', action: 'index'}, class: 'link' %>
+        <%= link_to 'Trash', trash_path, class: 'link' %>
+        <%= link_to 'Dashboard', dashboard_path, class: 'link' %>
+        <%= link_to 'My Notes', notes_path, class: 'link' %>
         <%= render "/search/search" %>
       </div>
     </nav>
