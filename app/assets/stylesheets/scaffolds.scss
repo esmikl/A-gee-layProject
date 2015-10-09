@@ -47,7 +47,10 @@ div {
 }
 
 #notice {
-  color: green;
+  background-color: green;
+  border-radius: 5px;
+  color: white;
+  padding: 8px 0px 4px 12px !important;
   text-transform: uppercase;
 }
 
