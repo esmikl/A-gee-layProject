@@ -6,7 +6,7 @@ class SharedNotesController < ApplicationController
     if @note == nil
       render 'shared_notes/no_shared_notes'
     else
-      render :edit
+      render :show
     end
   end
   
