@@ -20,7 +20,11 @@
       Signed is as <%= current_user.email %>. Not you?
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'link' %>
         <nav>
+          <% if @trashed_notes.nil? %>
+          <p id="badge">0</p>
+          <%else%>
           <p id="badge"><%= @trashed_notes.count%></p>
+          <%end%>
           <%= link_to 'Trash', trash_path, class: 'link' %>
           <%= link_to 'Dashboard', dashboard_path, class: 'link' %>
           <%= link_to 'My Notes', notes_path, class: 'link' %>
