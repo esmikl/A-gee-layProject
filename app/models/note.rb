@@ -1,6 +1,6 @@
 class Note < ActiveRecord::Base
   require 'digest/sha1'
-  
+  belongs_to :user
   has_many :tags, :dependent => :delete_all 
 
   validates_length_of :title, maximum: 250
