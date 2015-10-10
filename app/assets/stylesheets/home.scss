@@ -161,3 +161,14 @@ input {
 input#query {
   width: 200px;
 }
+
+p#badge {
+    background-color: red;
+    width: 20px;
+    border-radius: 20px;
+    float: right;
+    color: #FFF;
+    text-align: center;
+    margin-left: -9px;
+    position: relative;
+}

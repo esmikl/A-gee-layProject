@@ -20,12 +20,15 @@
       Signed is as <%= current_user.email %>. Not you?
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'link' %>
         <nav>
+          <p id="badge"><%= @trashed_notes.count%></p>
           <%= link_to 'Trash', trash_path, class: 'link' %>
           <%= link_to 'Dashboard', dashboard_path, class: 'link' %>
           <%= link_to 'My Notes', notes_path, class: 'link' %>
           
         </nav>
+      
     <div class="small_logo"></div>
+    
         
     <% else %>
     <br><br>
