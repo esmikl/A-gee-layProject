@@ -9,24 +9,31 @@
 </head>
 <body>
   <div id="bluestripe">
-      
+    <% if user_signed_in? %>
+      <div class="container">
+        <%= render "/search/search" %>
+      </div>
+    <%end%>
   </div>
   <div class="container">
     <% if user_signed_in? %>
       Signed is as <%= current_user.email %>. Not you?
     <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'link' %>
+        <nav>
+          <%= link_to 'Trash', trash_path, class: 'link' %>
+          <%= link_to 'Dashboard', dashboard_path, class: 'link' %>
+          <%= link_to 'My Notes', notes_path, class: 'link' %>
+          
+        </nav>
+    <div class="small_logo"></div>
+        
     <% else %>
+    <br><br>
       <%= link_to "Sign Up", new_user_registration_path, class: 'link' %> or <%= link_to "Sign In", new_user_session_path, class: 'link' %>
     <% end %> 
-    <nav>
-        <%= link_to 'Trash', trash_path, class: 'link' %>
-        <%= link_to 'Dashboard', dashboard_path, class: 'link' %>
-        <%= link_to 'My Notes', notes_path, class: 'link' %>
-        <%= render "/search/search" %>
-    </nav>
   </div>
   <div class="container">
-    <div class="small_logo"></div>
+    
     <div class="row">
     <% if notice %>
       <h4 id="notice" class="col-md-5"><%= notice %></h4>
@@ -35,8 +42,8 @@
     <% if alert %>
       <h4 class="alert"><%= alert %></h4>
     <% end %>
-
-    <%= yield %>
+      <%= yield %>
+    
   </div>
 
 </body>

@@ -147,7 +147,17 @@ input {
 
 #bluestripe {
   background-color: #13CCFF;
-  height: 20px;
+  height: auto;
   margin-bottom: 6px;
+  padding: 10px;
+  overflow: auto;
   width: 100%;
+}
+
+#search {
+  float: right;
+}
+
+input#query {
+  width: 200px;
 }
