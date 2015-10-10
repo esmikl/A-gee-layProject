@@ -4,7 +4,7 @@ class TagsController < ApplicationController
   end
 
   def show
-    @notes = Note.tagged_with(params[:tag]).where(:trash => false)
+    @notes = current_user.notes.tagged_with(params[:tag]).where(:trash => false)
      render 'notes/index.html.erb'
   end
 end
