@@ -43,8 +43,9 @@
 
 <script>
   $(function() {
-    $("#tag_list").autocomplete({
-      source: "/tags/list"
-    });
+    var availableTags = <%= ActsAsTaggableOn::Tag.all.map{|t| t.name}.to_json.html_safe %>
+      $("#note_tag_list").autocomplete({
+        source: availableTags
+      });
   });
 </script>

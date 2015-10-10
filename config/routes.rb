@@ -35,12 +35,7 @@ Rails.application.routes.draw do
   resources :trashed_notes, only: [:index, :update, :destroy]
   
   post '/trash' => 'trashed_notes#emptyTrash'
-  
-  resources :tags do
-    get :autocomplete_tag_name, :on => :collection
-  end
-  
-  get 'tags/list' => 'notes#list'
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

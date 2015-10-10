@@ -17,11 +17,6 @@ class NotesController < ApplicationController
       render :index
     end
   end
-  
-  def list
-    list = []
-    @tags = ActsAsTaggableOn::Tag.all.map{|t| t.name}.to_json
-  end
 
   # GET /notes/1
   # GET /notes/1.json
