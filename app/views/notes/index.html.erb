@@ -4,7 +4,7 @@
 
 <div id="tag_cloud">
   <h3>Filter by tag:</h3>
-  <% tag_cloud Note.tag_counts, %w[d m l] do |tag, css_class| %>
+  <% tag_cloud current_user.notes.tag_counts, %w[d m l] do |tag, css_class| %>
       <%= link_to tag.name, tag_path(tag.name), class: "tag_link" %>
       <% end %>
 </div><br>
