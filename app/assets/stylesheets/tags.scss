@@ -3,8 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #tag_cloud {
     width: 400px;
-    line-height: 1.6em;
-    .d { color: #323232; }
-    .m { color: #B3B3B3; }
-    .l { color: #D7D7D7; }
+    line-height: 2.6em;
+}
+
+.tag_link {
+  color: #FFF !important;
+  background-color: #0B06A4;
+  border: 2px solid #0B06A4;
+  border-radius: 5px;
+  padding: 4px;
+  &:hover {
+    color: #0B06A4 !important;
+    background-color: #FFF;
+    text-decoration: none;
+  }
 }

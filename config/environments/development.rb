@@ -11,6 +11,7 @@ Rails.application.configure do
   
   # Set default_url
   config.action_mailer.default_url_options = { host: 'localhost', port: '3000' }
+  config.action_mailer.delivery_method = :smtp
 
   # Show full error reports and disable caching.
   config.consider_all_requests_local       = true

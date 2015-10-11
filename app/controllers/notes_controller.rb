@@ -82,13 +82,13 @@ class NotesController < ApplicationController
   def share
     @note.share
     @note.save
-    redirect_to @note, notice: 'Note was successfully shared.'
+    redirect_to edit_note_path(@note), notice: 'Note was successfully shared.'
   end
   
   def unshare
     @note.unshare
     @note.save
-    redirect_to @note, notice: 'Note was successfully unshared.'
+    redirect_to edit_note_path(@note), notice: 'Note was successfully unshared.'
   end
 
   private

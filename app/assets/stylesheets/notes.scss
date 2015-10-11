@@ -12,7 +12,7 @@ td, th {
 }
 
 #preview h1, h2 {
-    text-transform: none;
+    text-transform: none !important;
 }
 
 textarea#note_content {
