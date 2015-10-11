@@ -6,7 +6,7 @@ class Note < ActiveRecord::Base
   validates_length_of :title, maximum: 250
   validates_presence_of :title, :content
   
-  acts_as_taggable
+  acts_as_taggable_on :tags
 
   def share
     self.slug = SecureRandom.urlsafe_base64
