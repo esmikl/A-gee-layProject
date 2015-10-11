@@ -25,11 +25,10 @@ h1.logo, {
 .small_logo {
     background-image: url(scrawl.png);
     background-repeat: no-repeat;
-    height: 90px; 
-    width: 15%;
-    background-size: 150px 60px;
+    height: 80px;
+    width: auto;
+    background-size: 170px auto;
     position: relative;
-    top: -40px;
 }
 
 .btn {
@@ -57,10 +56,12 @@ h1.logo, {
 
 p.signOut {
   margin-top: 20px;
+  float: left;
 }
 
 nav {
     height: 40px;
+    margin-top: 10px;
   
     form{
       float: right;
@@ -120,7 +121,7 @@ a.title_link {
   font-size: 18px;
   
   &:hover {
-    color: #13CCFF !important;
+    color: #13CCFF!important;
   }
 }
 
