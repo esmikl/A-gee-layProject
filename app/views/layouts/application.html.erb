@@ -17,8 +17,8 @@
   </div>
   <div class="container">
     <% if user_signed_in? %>
-      Signed is as <%= current_user.email %>. Not you?
-    <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'link' %>
+    <p class="signOut">Signed is as <%= current_user.email %>. Not you? 
+      <%= link_to "Sign Out", destroy_user_session_path, :method => :delete, class: 'link' %> </p>
         <nav>
           <% if @trashed_notes.nil? %>
           <p id="badge">0</p>
