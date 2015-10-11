@@ -8,6 +8,10 @@
       <th colspan="3"></th>
     </tr>
   </thead>
+  
+  <% if @trashed_notes.empty? %>
+      <p>Your trash is empty.</p>
+    <%end%>
 
 
   <tbody>
