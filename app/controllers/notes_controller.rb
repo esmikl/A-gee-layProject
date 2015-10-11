@@ -17,12 +17,6 @@ class NotesController < ApplicationController
       render :index
     end
   end
-  
-  def tagged
-    if params[:tag].present?
-      @tags = current_user.notes.tag_list
-    end
-  end
 
   # GET /notes/1
   # GET /notes/1.json
