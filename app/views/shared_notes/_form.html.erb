@@ -1,0 +1,42 @@
+<%= form_for(@note) do |f| %>
+  <% if @note.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@note.errors.count, "error") %> prohibited this note from being saved:</h2>
+
+      <ul>
+      <% @note.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="row">
+  <div class="field, col-md-6">
+    <%= f.label :title %><%= content_tag :span, ' - limit of 250 characters' %><br>
+    <%= f.text_field :title, :maxlength => 250, :placeholder  => 'e.g. Homework for BI class, Plan end of semester party', class:"col-md-12" %><br><br>
+  </div>
+  <div class="field, col-md-6">
+    <%= f.label :tags %><%= content_tag :span, ' - separate tags with commas' %><br>
+    <%= f.text_field :tag_list, value: @note.tag_list.to_s, :placeholder  => 'e.g. groceries, shopping, pet, party, clothes', class:"col-md-12" %><br><br>
+  </div>
+
+    <div class="field, col-md-6">
+      <%= f.label :content %><%= content_tag :span, ' - type your note here using markdown' %>
+        <%= f.text_area :content, :rows=>20, class:"col-md-12" %>
+    </div>
+
+    <div class="field, col-md-6">
+      <%= f.label :preview %><%= content_tag :span, ' - see your markdown in action' %>
+        <div id=preview>
+          <%= kramdown(@note.content) %>
+        </div>
+    </div>
+    
+    </div>
+   
+<br>
+  <div class="actions" >
+    <%= f.submit "Save Note", class: "btn" %>
+  </div>
+
+<% end %>
