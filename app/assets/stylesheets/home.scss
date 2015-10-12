@@ -25,11 +25,10 @@ h1.logo, {
 .small_logo {
     background-image: url(scrawl.png);
     background-repeat: no-repeat;
-    height: 90px; 
-    width: 15%;
-    background-size: 150px 60px;
+    height: 80px;
+    width: auto;
+    background-size: 170px auto;
     position: relative;
-    top: -40px;
 }
 
 .btn {
@@ -55,10 +54,14 @@ h1.logo, {
     }
 }
 
+p.signOut {
+  margin-top: 20px;
+  float: left;
+}
+
 nav {
     height: 40px;
-    padding-right: 30px;
-    margin-top: 30px;
+    margin-top: 10px;
   
     form{
       float: right;
@@ -72,8 +75,6 @@ nav {
 nav a {
     display: block;
     float: right;
-    height: 30px;
-    padding: 22px 25px 25px 25px;
     margin: auto 4px;
     text-transform: uppercase;
     text-decoration: none !important;
@@ -107,11 +108,20 @@ img.logo {
 a.link, input.link {
   border: 2px solid #0B06A4;
   border-radius: 5px;
-  padding: 4px;
+  padding: 10px;
   &:hover {
     color: #FFF !important;
     background-color: #0B06A4;
     text-decoration: none;
+  }
+}
+
+a.title_link {
+  text-decoration: underline;
+  font-size: 18px;
+  
+  &:hover {
+    color: #13CCFF!important;
   }
 }
 
