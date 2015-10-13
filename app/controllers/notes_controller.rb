@@ -7,14 +7,15 @@ class NotesController < ApplicationController
     @trashed_notes = current_user.notes.where(:trash => true)
     if params[:q]
       @notes = current_user.notes.find_all_by_query(params[:q]).where(:trash => false)
+      if @notes.empty?
+        render "search/no_results"
+      end
     else
-      @notes = current_user.notes.all.order('updated_at DESC').where(:trash => false)
-    end
-    
-    if @notes == []
-      render "notes/no_notes"
-    else
-      render :index
+      if current_user.notes.all.where(:trash => false) == []
+        render "notes/no_notes"
+      else
+        @notes = current_user.notes.all.order('updated_at DESC').where(:trash => false)
+      end
     end
   end
   
