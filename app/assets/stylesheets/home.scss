@@ -121,7 +121,17 @@ a.title_link {
   font-size: 18px;
   
   &:hover {
-    color: #13CCFF!important;
+    color: #FF8B0D!important;
+  }
+}
+
+a.signUplink {
+    border: none;
+    text-decoration: underline;
+    padding: 0;
+  
+  &:hover {
+    color: #FF8B0D !important;
   }
 }
 

@@ -37,6 +37,10 @@ input {
     height: 40px;
 }
 
+input[type="checkbox"] {
+  height: 12px;
+}
+
 ::-webkit-input-placeholder {
 	color: #CCC;
 }
