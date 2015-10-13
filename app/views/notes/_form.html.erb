@@ -43,7 +43,7 @@
 
 <script>
   $(function() {
-    var availableTags = <%= ActsAsTaggableOn::Tag.all.map{|t| t.name}.to_json.html_safe %>
+    var availableTags = <%= current_user.tags.collect{|t| t.name}.to_json.html_safe %>
       $("#note_tag_list").autocomplete({
         source: availableTags
       });

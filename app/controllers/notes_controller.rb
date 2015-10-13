@@ -17,6 +17,10 @@ class NotesController < ApplicationController
       render :index
     end
   end
+  
+  def set_tags
+    @tags = current_user.tags.collect{|t| t.name}.to_json
+  end
 
   # GET /notes/1
   # GET /notes/1.json

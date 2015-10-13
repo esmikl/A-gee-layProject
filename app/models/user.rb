@@ -5,5 +5,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
   
   has_many :notes
-  has_many :tags
+  has_many :tags, through: :notes
 end
